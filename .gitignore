@@ -1,0 +1,25 @@
+# Libraries
+#*.lvlibp
+#*.llb
+
+# Shared objects (inc. Windows DLLs)
+#*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+#*.exe
+
+# Metadata
+*.aliases
+*.lvlps
+.cache/
+*.svn
+
+
+#Subdirectories
+Source/LabVIEW/Artefacts/*
+
+# But do not ignore the specific file to make sure the build process works because this folder is used to store the build artefacts
+!Source/LabVIEW/Artefacts/Info.txt

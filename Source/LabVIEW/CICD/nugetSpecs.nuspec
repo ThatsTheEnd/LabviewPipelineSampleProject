@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>ZE_CUT_HardwareHandler</id>
+    <version>0.1.9</version>
+    <authors>nina</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- Icon is used in Visual Studio's package manager UI -->
+    <icon>hardwareHandler.png</icon>
+    <!-- Any details about this particular release -->
+    <releaseNotes>initial release</releaseNotes>
+    <projectUrl>https://ados.ps-zuehlke.com/Cutiss/C31081/_git/ZE_CUT_HardwareHandler</projectUrl>
+    <description>This library is used to start and stop all hardware modules.</description>
+    <copyright>$copyright$</copyright>
+    <tags>hardware handler</tags>
+    <dependencies>
+        <dependency id="ZE_DRV_FlowfrontDetectors" version="*"/>
+        <dependency id="ZE_DRV_PinchValves" version="*"/>
+        <dependency id="ZE_CUT_MovementHandler" version="*"/>
+        <dependency id="ZE_CUT_Incubator" version="*"/>
+        <dependency id="ZE_CUT_Messages" version="*"/>
+        <dependency id="ZE_Message_Hub" version="*"/>
+    </dependencies>
+    <!-- A readme.txt to display when the package is installed -->
+    <readme>readme.md</readme>
+  </metadata>
+  <!-- A readme.txt to display when the package is installed -->
+  <files>
+    <file src="..\Artefacts\**\*" target="" />
+    <file src="..\Icons\hardwareHandler.png" target="" />
+    <file src="..\..\..\readme.md" target="" />
+  </files>
+</package>

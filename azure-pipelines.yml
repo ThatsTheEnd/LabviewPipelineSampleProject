@@ -1,0 +1,222 @@
+variables:
+  projectName: '1_ZE_CUT_HardwareHandler.lvproj'
+  nugetPackageName: 'ZE_CUT_HardwareHandler'
+  lvlibpBuildSpecName: 'ZE_CUT_HardwareHandler'
+  timeoutToOpenProject: 60
+  CICDBaseScriptPath: '.\Source\LabVIEW\CICD'
+
+pool:
+  name: 'CutissPool'
+
+resources:
+  pipelines:
+  - pipeline: ze_drv_flowfront_detectors
+    source: ZE_DRV_FlowfrontDetectors
+    trigger:
+      branches:
+        include:
+        - main
+  - pipeline: ze_drv_pinch_valve
+    source: ZE_DRV_PinchValve
+    trigger:
+      branches:
+        include:
+        - main
+  - pipeline: ze_cut_movement_handler
+    source: ZE_CUT_MovementHandler
+    trigger:
+      branches:
+        include:
+        - main
+  - pipeline: ze_cut_incubator
+    source: ZE_CUT_Incubator
+    trigger:
+      branches:
+        include:
+        - main
+  - pipeline: ze_cut_messages
+    source: ZE_CUT_Messages
+    trigger:
+      branches:
+        include:
+        - main
+  - pipeline: ze_message_hub
+    source: ZE_MessageHub
+    trigger:
+      branches:
+        include:
+        - main
+
+steps:
+# clean existing files if threre are any from last build to make sure dependencies are not laoded from build path
+- checkout: self
+  clean: true
+  persistCredentials: true
+
+- task: NuGetAuthenticate@1
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\printPipelineVersion.ps1'
+    arguments: '$(CICDBaseScriptPath)\changelog.md'
+  displayName: 'Print pipeline version'
+
+# Update the latest dependencies
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\updateDependencies.ps1'
+  displayName: 'Update Dependencies'
+
+# Check if Artefacts folder exists, if not create it
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\checkIfArtefactsFolderExists.ps1'
+  displayName: 'Check Artefacts folder'
+  
+# Get latest git tag. this produces a variable called latestTag with the form "1.2.3"
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\getLatestGitTag.ps1'
+  displayName: 'Get latest tag'
+
+- powershell: |
+    Write-Host "this is the latest tag: $(latestTag)"
+    Write-Host "this is the buildID: $(Build.BuildId)"
+  displayName: 'Print variables'
+
+# Set the build number of the lvlibp to the latest tag
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\setLvlibpBuildNumber.ps1'
+    arguments: '$(projectName) $(lvlibpBuildSpecName) $(latestTag).$(Build.BuildId)'
+  displayName: 'Set lvlibp build number in LabVIEW project'
+
+# Open Project for later steps
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\openProject.ps1'
+    arguments: '$(projectName) $(timeoutToOpenProject)'
+  displayName: 'Open Project for later steps'
+
+# Set HARDWARE_ENABLED to true
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\setOrReplaceLabviewConditionalSymbol.ps1'
+    arguments: '$(projectName) HARDWARE_ENABLED True'
+  displayName: 'Set HARDWARE_ENABLED to True'
+
+# Set HARDWARE_ENABLED to false
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\setOrReplaceLabviewConditionalSymbol.ps1'
+    arguments: '$(projectName) HARDWARE_ENABLED False'
+  displayName: 'Set HARDWARE_ENABLED to False'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\runUnitTests.ps1'
+  displayName: 'Run unit tests'
+  continueOnError: true
+
+
+# Publish Unit Test Results
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**\AllUnitTests.xml'
+    searchFolder: '$(Build.SourcesDirectory)\Source\LabVIEW\Artefacts'
+  displayName: 'Publish Unit Test Results'
+
+# Set HARDWARE_ENABLED to true
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\setOrReplaceLabviewConditionalSymbol.ps1'
+    arguments: '$(projectName) HARDWARE_ENABLED True'
+  displayName: 'Set HARDWARE_ENABLED to True'
+  
+
+# Execute VIAnalyzer Script
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\runViAnalyzer.ps1'
+  displayName: 'Execute VIAnalyzer Script'
+
+# Publish VIA results as checkstyle format
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo'
+    summaryFileLocation: '$(Build.SourcesDirectory)\Source\LabVIEW\Artefacts\VIAresults.xml'
+
+# Check VIA and Unit Test Results for Failures. If there are any, the build will fail, and LabVIEW will restart for later use.
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\checkViaAndUnitTestResults.ps1'
+  displayName: 'Check VIA and Unit Test Results for Failures'
+
+# Build Source Code
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\executeBuildSpec.ps1'
+  displayName: 'Build Source Code'
+
+  # close labview
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\quitLabVIEW.ps1'
+  displayName: 'Quit LabVIEW'
+
+- powershell: |
+    $buildId = "$(Build.BuildId)"
+    $pathToPublish = "$(Build.SourcesDirectory)\Source\LabVIEW\Artefacts\$(nugetPackageName).$env:latestTag.$buildId.nupkg"
+    echo "##vso[task.setvariable variable=fullPathToPublish]$pathToPublish"
+  displayName: 'Set Full Path for Artifact'
+
+# Step 4: Adjust package number
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\setNugetPackageNumber.ps1'
+    arguments: '$(latestTag).$(Build.BuildId)'
+  displayName: 'Set Nuget Spec Build Number'
+
+# Step 5: Build Nuget Package
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\executeNugetBuild.ps1'
+  displayName: 'Build Nuget Package'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: $(fullPathToPublish)
+    ArtifactName: 'BuildArtifact'
+  displayName: 'Publish Nuget Package to Build'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    packagesToPush: '$(Build.SourcesDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '5730fe10-0147-4e59-921b-50748ebecdab/bb42e866-f67c-48ae-a156-9951046a00f6'
+  displayName: 'Publish Nuget Package to Feed'
+
+  # Last step: Open LabVIEW for later use
+- task: PowerShell@2
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(CICDBaseScriptPath)\openLabviewForLaterUse.ps1'
+  displayName: 'Open LabVIEW for later use'
