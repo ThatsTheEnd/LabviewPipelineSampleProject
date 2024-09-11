@@ -1,51 +1,24 @@
+# Declare these variables for rest of your pipeline
 variables:
-  projectName: '1_ZE_CUT_HardwareHandler.lvproj'
-  nugetPackageName: 'ZE_CUT_HardwareHandler'
-  lvlibpBuildSpecName: 'ZE_CUT_HardwareHandler'
+  projectName: 'pipelineExampleProject.lvproj'
+  nugetPackageName: 'pipelineExamplePackage'
+  lvlibpBuildSpecName: 'pipelineExamplePackage'
   timeoutToOpenProject: 60
   CICDBaseScriptPath: '.\Source\LabVIEW\CICD'
 
 pool:
-  name: 'CutissPool'
+  name: 'pipelineExampleAgents'
 
-resources:
-  pipelines:
-  - pipeline: ze_drv_flowfront_detectors
-    source: ZE_DRV_FlowfrontDetectors
-    trigger:
-      branches:
-        include:
-        - main
-  - pipeline: ze_drv_pinch_valve
-    source: ZE_DRV_PinchValve
-    trigger:
-      branches:
-        include:
-        - main
-  - pipeline: ze_cut_movement_handler
-    source: ZE_CUT_MovementHandler
-    trigger:
-      branches:
-        include:
-        - main
-  - pipeline: ze_cut_incubator
-    source: ZE_CUT_Incubator
-    trigger:
-      branches:
-        include:
-        - main
-  - pipeline: ze_cut_messages
-    source: ZE_CUT_Messages
-    trigger:
-      branches:
-        include:
-        - main
-  - pipeline: ze_message_hub
-    source: ZE_MessageHub
-    trigger:
-      branches:
-        include:
-        - main
+# Add this part if your pipeline depends on another pipeline
+# resources:
+#   pipelines:
+#   - pipeline: myDependentPipeline
+#     source: myDependentPipeline
+#     trigger:
+#       branches:
+#         include:
+#         - main
+
 
 steps:
 # clean existing files if threre are any from last build to make sure dependencies are not laoded from build path

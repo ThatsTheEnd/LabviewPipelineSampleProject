@@ -1,8 +1,8 @@
 # Check if a parameter was provided. 
 # This script defines a parameter $projectPath with a default value of "..\ZE_DRV_PinchValve.lvproj". If the script is called with a parameter, that parameter will override the default value.
 param (
-    [string]$projectName = "ZE_DRV_PinchValve.lvproj",
-    [int]$timeout = 120
+    [string]$projectName = "pipelineExampleProject.lvproj",
+    [int]$timeout = 30
 )
 
 # Convention: all PowerShell outputs should have a "PS: " in the beginning, all LabVIEW outpus should beginn with "LV: " to make them distinguishable
