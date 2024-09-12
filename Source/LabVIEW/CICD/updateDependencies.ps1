@@ -2,8 +2,8 @@
 
 # Check if a parameter was provided. 
 param (
-    [string]$NUGET_CUTISS_FEED_NAME = "CutissFeed",
-    [string]$NUGET_CUTISS_FEED_PATH = "https://ados.ps-zuehlke.com/Cutiss/C31081/_packaging/CutissFeed/nuget/v3/index.json"
+    [string]$NUGET_CUTISS_FEED_NAME = "GDEvConExample",
+    [string]$NUGET_CUTISS_FEED_PATH = "https://pkgs.dev.azure.com/my_team/_packaging/my_team/nuget/v3/index.json"
 )
 
 $PackageFile = ".\nugetSpecs.nuspec"

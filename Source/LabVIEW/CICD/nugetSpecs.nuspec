@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>ZE_CUT_HardwareHandler</id>
+    <id>PipelineExample</id>
     <version>0.1.9</version>
-    <authors>nina</authors>
+    <authors>G Coder</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <!-- Icon is used in Visual Studio's package manager UI -->
-    <icon>hardwareHandler.png</icon>
+    <icon>example.jpg</icon>
     <!-- Any details about this particular release -->
     <releaseNotes>initial release</releaseNotes>
     <projectUrl>https://ados.ps-zuehlke.com/Cutiss/C31081/_git/ZE_CUT_HardwareHandler</projectUrl>
@@ -28,7 +28,7 @@
   <!-- A readme.txt to display when the package is installed -->
   <files>
     <file src="..\Artefacts\**\*" target="" />
-    <file src="..\Icons\hardwareHandler.png" target="" />
+    <file src="..\Icons\example.jpg" target="" />
     <file src="..\..\..\readme.md" target="" />
   </files>
 </package>

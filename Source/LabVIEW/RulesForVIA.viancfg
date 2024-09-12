@@ -26,295 +26,235 @@
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_ActorTools_VIM"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Acquire Module Semaphore.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_DQMH_ExtLib"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Broadcast Events--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Acquire Module Semaphore.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Close Module.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Broadcast Events--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Destroy Broadcast Events.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\BroadTimeoutHL Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Destroy Module Semaphore Reference.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\BroadTimeoutHL.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Destroy Request Events.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\BroadVIRef Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Destroy Sync Refnums.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\BroadVIRef.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Did Init Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Close Module.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Did Something.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Destroy Broadcast Events.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Do Something Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Destroy Module Semaphore Reference.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Do Something Else and Wait (Reply Payload)--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Destroy Request Events.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Do Something Else and Wait for Reply Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Destroy Sync Refnums.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Do Something Else and Wait for Reply.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Did Init Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Do Something Else Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Error Reported Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Do Something Else.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Error Reported.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Do Something.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Get Module Execution Status Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Error Reported Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Get Module Execution Status.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Error Reported.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Get Module Main VI Information.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Get Module Execution Status Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Get Sync Refnums.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Get Module Execution Status.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Handle Exit.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Get Module Main VI Information.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Hide Panel Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Get Sync Refnums.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Hide Panel.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Handle Exit.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Hide VI Panel.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Hide Panel Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Init Module.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Hide Panel.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\initMessageHub Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Hide VI Panel.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\initMessageHub.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Init Module.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Data--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Data--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Did Init.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Did Init.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Did Stop.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Did Stop.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Name--constant.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Name--constant.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Not Running--error.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Not Running--error.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Not Stopped--error.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Not Stopped--error.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Not Synced--error.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Not Synced--error.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Module Timeout--constant.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Module Timeout--constant.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Null Broadcast Events--constant.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Null Broadcast Events--constant.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Obtain Broadcast Events for Registration.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Obtain Broadcast Events for Registration.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Obtain Broadcast Events.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Obtain Broadcast Events.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Obtain Module Semaphore.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Obtain Module Semaphore.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Obtain Request Events.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Obtain Request Events.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Open VI Panel.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Open VI Panel.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Release Module Semaphore.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Release Module Semaphore.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Request and Wait for Reply Timeout--error.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Request and Wait for Reply Timeout--error.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Request Events--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Request Events--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\sendMessageViaHub Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Show Diagram Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\sendMessageViaHub.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Show Diagram.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\SetHelperLoopTimeout Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Show Panel Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\SetHelperLoopTimeout.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Show Panel.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Show Diagram Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Start Module.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Show Diagram.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Status Updated Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Show Panel Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Status Updated.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Show Panel.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Stop Argument--cluster.ctl"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Start Module.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Stop Module.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Status Updated Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Synchronize Caller Events.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Status Updated.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Synchronize Module Events.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Stop Argument--cluster.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Update Module Execution Status.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Stop Module.vi"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Wait on Event Sync.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Synchronize Caller Events.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Synchronize Module Events.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Update Module Execution Status.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Wait on Event Sync.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\Wait on Module Sync.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_ConfigParam.ctl"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_DVR_Init.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_DVR_Read.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_DVR_Read_HL.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_DVR_Write.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_DVR_WriteConfig.vi"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_DVR_WriteEnum.ctl"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_HL_MessageData.ctl"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_Message.ctl"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_MessageData.ctl"</Path>
-		<Removed>TRUE</Removed>
-	</Item>
-	<Item>
-		<Path>"Libraries\\ZE_CUT_HardwareHandler\\ZE_ProcessCmd.ctl"</Path>
+		<Path>"Libraries\\helloDqmhWorldModule\\Wait on Module Sync.vi"</Path>
 		<Removed>TRUE</Removed>
 	</Item>
 </ItemsToAnalyze>

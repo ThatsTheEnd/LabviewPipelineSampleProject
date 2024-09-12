@@ -1,6 +1,8 @@
 # LabviewPipelineSampleProject
 This repo contains the powershell scripts, VIs and azure YML file for a fully funcitonal pipeline on Azure DevOps.
 
+!!!The LabVIEW code in this repo is atm in version 2023, it will be ported down to 2020, but should actually run on anything that is supported by any of the packages below. The G-CLI will also asume LV2023 in powershell scripts for the moment!!!
+
 ## TL:DR
 This is an overview how this repo should help you along:
 
@@ -59,9 +61,36 @@ This will open the project for you. If you had it already open, close the projec
 7. Run the unit tests:
 
 ```powershell
-.\.\runUnitTests.ps1
+.\runUnitTests.ps1
 ```
 THis will create a unit test results file.
 
-9. Run the VI Analyzer for your code.
+8. Run the VI Analyzer for your code.
 
+```powershell
+.\runViAnalyzer.ps1
+```
+
+9. Execute the build spec for the packed library
+
+```powershell
+.\executeBuildSpec.ps1
+```
+
+10. Execute the nuget build for a nuget package
+
+```powershell
+.\executeNugetBuild.ps1
+```
+
+11. Inspect all the output files in the folder `root\Source\LabVIEW\Artefacts`, you should have the packed library and the nuget file in there.
+
+12. Set a git tag in your repo for the pipeline to have a starting point for your versioning, e.g. `git tag 0.1.0`
+
+13. Push your code to the remote origin.
+
+14. In the web browser, open Azure Devops, go to pipelines, select you repo and choose you YML file.
+
+15. Watch your pipeline run (and probably fail) for the first time. Do not be discouraged by that!!!
+
+16. Go and fix the minor errors from the error log of the pipeline and watch you pipeline succeed :)
